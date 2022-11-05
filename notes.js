@@ -105,4 +105,4 @@ console.log(eligibleForLoan); // returns false
  let defaultColor = 'blue';
  let currentColor = userColor || defaultColor;
 
- console.log(currentColor); // returns blue
+ console.log(currentColor); // returns the color blue
