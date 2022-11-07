@@ -38,17 +38,18 @@ let selectedColor = null; // Type and value
 // Objects
 
 let person = { // Object Literal
-    name: 'Eve', // Key value pair
+    name: 'Eve', // Key value pair ( key = properties)
     age: 30
 };
 
 // Dot Notation
-person.name = 'Eva';
+person.name = 'Eva'; // changes the name of the person
 
 // Bracket Notation
-person['name'] = 'Pusheen'; // When var selected at runtime
+person['name'] = 'Pusheen'; // When var selected at runtime by user
 
-// console.log(person.name); // Console will show Eva
+console.log(person.name); // Console will show Eva
+
 
 
 // Equality operators
@@ -57,6 +58,7 @@ x !== 1; // Is not equal
 x == 1; // Is equal, loose equality, diff type same value
 
 // Ternary operator
+// If a customer has more than 100 points, they are a gold customer
 let points = 110;
 let type = points > 100 ? 'gold' : 'silver';
 
@@ -94,15 +96,55 @@ console.log(eligibleForLoan); // returns false
 // 0
 // false
 // ''
-// NAN (not a number)
+// NaN (not a number)
 
 // Truthy values (anything not falsy)
 
 // short-circuiting
- //false || 1 || 2
+// false || 1 || 2
+// First operand that is true, console returns true.
 
  let userColor = 'undefined'; 
  let defaultColor = 'blue';
  let currentColor = userColor || defaultColor;
 
  console.log(currentColor); // returns the color blue
+
+ // Bitwise operators
+ // 1 = 00000001 (8-bit information, each number is a bit)
+ // 2 = 00000010
+ // R = 00000011 = 3
+ // R = 00000000 = 0
+
+ console.log(1 | 2); //Bitwise or
+ console.log(1 & 2); //Bitwise and
+
+ // Read, Write, Execute permissions
+ // 00000100
+ // 00000110
+ // 00000111
+
+const readPermission = 4;
+const writePermission = 2;
+const executePermission = 1;
+let myPermission = 0;
+myPermission = myPermission | readPermission | writePermission;
+
+let message = (myPermission & readPermission) ? 'yes': 'no';
+
+console.log(message);
+
+let x = (2 + 3) * 4; // * gets priority, unless you put parentheses
+
+console.log(x);
+
+//Exercise - swap the values of a and b
+
+let a = 'red';
+let b = 'blue';
+let c = a;
+a = b;
+b = c;
+
+console.log(a);
+console.log(b);
