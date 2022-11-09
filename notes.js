@@ -148,3 +148,60 @@ b = c;
 
 console.log(a);
 console.log(b);
+
+// Conditional Statements 
+// If...else, Switch...case
+
+if (condition) {
+    statement
+}
+else if (anotherCondition) {
+    statement
+}
+else {
+    statement
+}
+
+let hour = 10;
+
+if (hour >= 6 && hour < 12) 
+    console.log('Good Morning');
+else if (hour >= 12 && hour < 18) 
+    console.log('Good Afternoon');
+else 
+    console.log('Good Evening');
+
+// don't need curly braces because these are single statements after the else
+
+// Switch and case (a little outdated)
+// Compare the value of a variable against a bunch of other values
+
+let role = 'guest';
+
+switch (role) {
+    case 'guest':
+        console.log('Guest User')
+        break;
+    case 'moderator':
+        console.log('Moderator user');
+        break;
+
+    default:
+        console.log('Unknown User');
+}
+
+// This is cleaner 
+if (role === 'guest') console.log('Guest');
+else if (role === 'moderator') console.log('Moderator');
+else console.log('Unknown');
+
+// For Loops
+for (initalExpression; condition; incrementExpression)
+// i is loop variable, stands for index
+// needs these three statements
+
+for (let i = 0; i < 5; i++) {
+    console.log('Hello World');
+}
+
+// the i is incremented until it is larger than five (starts a 0 like an array)
